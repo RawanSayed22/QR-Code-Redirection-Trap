@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,28 +9,40 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #fef3c7, #fde68a, #fcd34d, #fbbf24);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .playfair {
       font-family: 'Playfair Display', serif;
     }
   </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex items-center justify-center">
-  <div class="bg-white p-10 rounded-xl shadow-xl max-w-md w-full">
-    <h2 class="text-3xl font-bold mb-4 playfair text-center text-amber-600">Delights Rewards</h2>
-    <p class="text-gray-600 mb-6 text-center">Join our exclusive members club and enjoy 20% off your next meal!</p>
+<body class="min-h-screen flex items-center justify-center">
+  <div class="bg-white p-10 rounded-xl shadow-2xl max-w-md w-full transition-transform duration-500 hover:scale-105">
+    <h2 class="text-4xl font-bold mb-4 playfair text-center text-amber-600">Exclusive Member Offer</h2>
+    <p class="text-gray-700 mb-6 text-center text-base leading-6">
+      Become a Delights member today and receive <strong class="text-amber-600">20% OFF</strong> your next order.<br>
+      Fast sign-up. No hidden terms.
+    </p>
 
-    <form action="awareness.html" method="GET">
-
+    <form action="awareness.html" method="GET" class="space-y-4">
       <div>
-        <label class="block text-gray-700 font-medium mb-1">Email address</label>
-        <input type="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600">
+        <label class="block text-gray-800 font-semibold mb-1 text-sm">Email address</label>
+        <input type="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-sm">
       </div>
       <div>
-        <label class="block text-gray-700 font-medium mb-1">Password</label>
-        <input type="password" name="password" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600">
+        <label class="block text-gray-800 font-semibold mb-1 text-sm">Password</label>
+        <input type="password" name="password" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-sm">
       </div>
-      <button type="submit" class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 transition">Join Now</button>
+      <button type="submit" class="w-full bg-amber-600 text-white py-2 rounded-lg font-semibold hover:bg-amber-700 transition text-sm">Join Now</button>
     </form>
   </div>
 </body>
