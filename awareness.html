@@ -9,23 +9,54 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #fef3c7, #fde68a, #fcd34d, #fbbf24);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .playfair {
       font-family: 'Playfair Display', serif;
     }
   </style>
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen px-4">
-  <div class="bg-white p-10 rounded-xl shadow-xl max-w-xl text-center">
-    <h1 class="text-4xl font-bold text-amber-600 mb-4 playfair">Be Cautious!</h1>
-    <p class="text-gray-700 text-lg mb-6">
-      This was a <strong>phishing awareness demo</strong> designed to show you how dangerous QR codes can be.
+<body class="flex items-center justify-center min-h-screen px-4">
+  <div class="bg-white p-10 rounded-xl shadow-2xl max-w-2xl w-full text-center transition-transform duration-300 hover:scale-105">
+    
+    <h1 class="text-4xl font-bold text-red-600 mb-4 playfair">⚠️ You’ve Been Phished</h1>
+    
+    <p class="text-gray-800 text-lg mb-4">
+      This wasn’t a real login. It was a <strong class="text-red-600">phishing awareness experiment</strong>.
     </p>
-    <p class="text-gray-600 mb-8">
-      Always double-check links before entering your information. Not every QR code leads somewhere safe.
+    
+    <p class="text-gray-700 mb-4">
+      👁 You trusted a QR code.<br>
+        You entered your credentials.<br>
+        And just like that, an attacker could’ve taken over your account.
     </p>
-    <a href="index.html" class="inline-block bg-amber-600 text-white px-6 py-3 rounded-full font-medium hover:bg-amber-700 transition">Back to Safety</a>
+    
+    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 text-left rounded">
+      <p class="font-semibold mb-2">🚫 Important:</p>
+      <ul class="list-disc ml-6 text-sm">
+        <li>Never trust a QR blindly.</li>
+        <li>Always verify the URL *before* entering any data.</li>
+        <li>Look out for sudden redirects.</li>
+        <li>Use multi-factor authentication (MFA).</li>
+        <li>When in doubt, don’t log in.</li>
+      </ul>
+    </div>
+    
+    <p class="text-gray-600 mb-6">
+      This was a simulation created for cybersecurity awareness.<br>
+      But in the real world — attacks like this happen every day.
+    </p>
+
+    <a href="index.html" class="inline-block bg-amber-600 text-white px-6 py-3 rounded-full font-medium hover:bg-amber-700 transition"> Back to Home</a>
   </div>
 </body>
 </html>
-
